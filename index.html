@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      font-size: 118%;
+      font-weight: 600;
+      color: whitesmoke;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: rgba(15, 23, 34, 255);
+      height: 950px;
+    }
+    .container {
+      background-color: rgba(29, 40, 58, 255);
+      border: 2px solid rgb(2, 2, 2);
+      height: 90%;
+      width: 35%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: auto;
+      box-sizing: border-box;
+    }
+    #view {
+      background-color: #485667;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      font-size: 170%;
+      border: 2px solid rgb(3, 3, 3);
+      border-radius: 8px;
+      width: 90%;
+      height: 15%;
+      padding: 2rem;
+      margin: 2%;
+    }
+    .keys {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 70%;
+      width: 92%;
+      margin: 7px;
+    }
+    .r1 {
+      height: 80%;
+      width: 98%;
+      margin: 5px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+    .box {
+      background-color: rgba(52, 67, 86, 255);
+      border-radius: 4px;
+      margin: 7px;
+      width: 45%;
+      height: 99%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+    .box:hover {
+      background-color: rgba(108, 99, 254, 255);
+    }
+    .cl {
+      width: 90%;
+      height: 15%;
+      margin: 2%;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+    }
+    #clear {
+      background-color: #2d323b;
+      color: rgb(199, 211, 247);
+      font-size: 170%;
+      border-radius: 8px;
+      width: 99%;
+      padding: 2%;
+      margin: 2%;
+      border: none;
+    }
+    #clear:hover {
+      background-color: #675cd8;
+      color: black;
+    }
+    @media (max-width: 426px) {
+      .container {
+        width: 80%;
+        height: 55%;
+        font-size: 80%;
+      }
+      #clear {
+        font-size: 150%;
+      }
+    }
+    @media (max-width: 769px) and (min-width: 426px) {
+      .container {
+        width: 50%;
+        height: 55%;
+        font-size: 80%;
+      }
+      #clear {
+        font-size: 150%;
+      }
+    }
+    @media (max-width: 1441px) and (min-width: 769px) {
+      .container {
+        width: 60%;
+        height: 110%;
+        font-size: 150%;
+      }
+      #clear {
+        font-size: 180%;
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div id="view"></div>
+      <div class="keys">
+        <div class="r1">
+          <div class="box" id="b1" onclick="callme(1)">1</div>
+          <div class="box" id="b2" onclick="callme(2)">2</div>
+          <div class="box" id="b3" onclick="callme(3)">3</div>
+          <div class="box" id="b4" onclick="callme('+')">+</div>
+        </div>
+        <div class="r1">
+          <div class="box" id="b5" onclick="callme(4)">4</div>
+          <div class="box" id="b6" onclick="callme(5)">5</div>
+          <div class="box" id="b7" onclick="callme(6)">6</div>
+          <div class="box" id="b8" onclick="callme('-')">-</div>
+        </div>
+        <div class="r1">
+          <div class="box" id="b9" onclick="callme(7)">7</div>
+          <div class="box" id="b10" onclick="callme(8)">8</div>
+          <div class="box" id="b11" onclick="callme(9)">9</div>
+          <div class="box" id="b12" onclick="callme('*')">*</div>
+        </div>
+        <div class="r1">
+          <div class="box" id="b13" onclick="callme('/')">/</div>
+          <div class="box" id="b14" onclick="callme(0)">0</div>
+          <div class="box" id="b15" onclick="callme('.')">.</div>
+          <div class="box" id="b16" onclick="callme('=')">=</div>
+        </div>
+      </div>
+      <div class="cl">
+        <button id="clear" onclick="document.location.reload(true)">
+          Clear
+        </button>
+      </div>
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>
